@@ -4,7 +4,7 @@ import './form.css'
 import Ingredient from './Ingredient'
 import Output from './Output'
 import { getRecipeFromMistral } from "./ai"
-
+import App from './App'
 function Form()
 {
   
@@ -34,6 +34,7 @@ function Form()
         </form>
         {ingredients.length > 0 && <Ingredient ingredients={ingredients} 
         getRecipe={getRecipe}/>}
+        <App />
        
             {recipe  && <Output recipe={recipe} />}
              
