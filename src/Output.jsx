@@ -1,6 +1,6 @@
 import ReactMarkdown from 'react-markdown'
 
-export default Output
+
 
  function Output(props){
  
@@ -16,3 +16,4 @@ export default Output
 
     )
 }
+export default Output
