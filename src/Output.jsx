@@ -12,6 +12,7 @@ import ReactMarkdown from 'react-markdown'
     {props.recipe}
     </ReactMarkdown>
 </section>
+<p>hi</p>
         </>
 
     )
