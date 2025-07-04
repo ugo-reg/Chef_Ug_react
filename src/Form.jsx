@@ -34,9 +34,8 @@ function Form()
         </form>
         {ingredients.length > 0 && <Ingredient ingredients={ingredients} 
         getRecipe={getRecipe}/>}
-        <App />
-       
-            {recipe  && <Output recipe={recipe} />}
+        
+        {recipe  && <Output recipe={recipe} />}
              
             
         </>
