@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown'
     return(
         <>
             <section>
-    <h2>Chef-UG Recommends:</h2>
+    <h2>Chef-UG Recommends :</h2>
     
     <ReactMarkdown>
     {props.recipe}

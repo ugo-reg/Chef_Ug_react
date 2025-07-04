@@ -32,7 +32,7 @@ function Form()
             <button>+Add ingredient</button>
            
         </form>
-        {ingredients.length > 0 && <Ingredient ingredients={ingredients} 
+        {ingredients.length > 0 && <Ingredient className="get" ingredients={ingredients} 
         getRecipe={getRecipe}/>}
         
         {recipe  && <Output recipe={recipe} />}

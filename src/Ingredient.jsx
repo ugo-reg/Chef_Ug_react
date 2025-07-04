@@ -1,4 +1,4 @@
-
+import './ingredient.css'
  
 export default function Ingredient(prop){
    
@@ -11,15 +11,15 @@ export default function Ingredient(prop){
     <>
     <section>
 
-            <h2>Ingredients on hand:</h2>
+            <h2>Ingredients on hand :</h2>
         <ul>{ingredientsListItems}</ul>
                
-               {prop.ingredients.length > 3 && <div>
+               {prop.ingredients.length > 3 && <div className="on">
                     <div className="eki">
-                        <h3>Ready for a recipe?</h3>
+                        <h3>Ready for a recipe ?</h3>
                         <p>Generate a recipe from your list of ingredients.</p>
                     </div>
-                    <button onClick={prop.getRecipe}>Get a recipe</button>
+                    <button className="btn" onClick={prop.getRecipe}>Get a recipe</button>
                 </div>}
             </section>
             </>
