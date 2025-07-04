@@ -19,7 +19,7 @@ export default function Ingredient(prop){
                         <h3>Ready for a recipe ?</h3>
                         <p>Generate a recipe from your list of ingredients.</p>
                     </div>
-                    <button className="btn" onClick={prop.getRecipe}>Get a recipe</button>
+                    <button type="submit" className="btn" onClick={prop.getRecipe}>Get a recipe</button>
                 </div>}
             </section>
             </>

@@ -29,5 +29,13 @@ button:hover{
 body{
  color:whitesmoke;
  padding:10px;
+}.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  color: #ff9800;
 }
+
+
 

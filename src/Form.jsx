@@ -4,18 +4,21 @@ import './form.css'
 import Ingredient from './Ingredient'
 import Output from './Output'
 import { getRecipeFromMistral } from "./ai"
-import App from './App'
+import { ClipLoader } from "react-spinners";
+
 function Form()
 {
   
     const [ingredients, setIngredients] = useState([])
     const [inputValue, setInputValue] = useState("")
     const [recipe, setRecipe ] = useState(false) 
-
+    const [loading, setLoading] = useState(false)
     
       async function getRecipe() {
+         setLoading(true);
        const  RecipeMarkDown= await getRecipeFromMistral(ingredients) 
        setRecipe(RecipeMarkDown)
+        setLoading(false); 
       
     }
    
@@ -34,8 +37,14 @@ function Form()
         </form>
         {ingredients.length > 0 && <Ingredient className="get" ingredients={ingredients} 
         getRecipe={getRecipe}/>}
-        
-        {recipe  && <Output recipe={recipe} />}
+       {loading && (
+  <div className="spinner-container">
+    <ClipLoader color="#ff9800" size={50} />
+    <p>Are your pans ready??? 🍳</p>
+  </div>
+)}
+
+        {!loading && recipe  && <Output recipe={recipe} />}
              
         
         </>
