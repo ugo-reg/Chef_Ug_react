@@ -1,5 +1,6 @@
 .btn{background-color: navy;
 color:antiquewhite;
+height: 100px;
 }
 .btn:hover{transform: scale(1.0);}
 .on{display:flex;
