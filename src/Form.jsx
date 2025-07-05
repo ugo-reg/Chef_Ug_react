@@ -45,7 +45,7 @@ function Form()
 
         {!loading && recipe  && <Output recipe={recipe} />}
              
-        
+    
         </>
             
     )
