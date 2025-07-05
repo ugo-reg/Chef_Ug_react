@@ -12,3 +12,12 @@ h2{font-size:35px;
 }
 
 h3{font-size: 30px;}
+
+@media (max-width:600px) {
+    .btn{ height:100px;
+        width:150px;
+    }
+    .on{display:block;
+    border:none;}
+    
+}

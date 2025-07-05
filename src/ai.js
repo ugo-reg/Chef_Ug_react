@@ -14,13 +14,12 @@ export async function getRecipeFromMistral(ingredientsArr) {
 
     const ingredientsString = ingredientsArr.join(", ");
     const prompt = `generate simple and tasty recipe about ${ingredientsString}`;
-    // Encode parameters for URL
+    
     const url = `https://api.shecodes.io/ai/v1/generate?prompt=${encodeURIComponent(prompt)}&context=${encodeURIComponent(context)}&key=${API_KEY}`;
     try {
         const response = await axios.get(url);
         
-        // Adjust this line based on your new API's response structure
-        return response.data.answer; // or response.data.result if that's the field
+        return response.data.answer;
     } catch (err) {
         console.error("API error:", err);
     }

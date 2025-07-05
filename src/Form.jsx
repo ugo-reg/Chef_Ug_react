@@ -1,5 +1,4 @@
 import { useState } from 'react'
-
 import './form.css'
 import Ingredient from './Ingredient'
 import Output from './Output'
@@ -18,14 +17,14 @@ function Form()
          setLoading(true);
        const  RecipeMarkDown= await getRecipeFromMistral(ingredients) 
        setRecipe(RecipeMarkDown)
-        setLoading(false); 
+        setLoading(false)
       
     }
    
         function spice(formData){
           const newIngredient = formData.get("ingredient")
           setIngredients(prevIngredients => [...prevIngredients, newIngredient])
-           setInputValue("");
+           setInputValue("")
         }
     return( 
         <>
@@ -39,8 +38,8 @@ function Form()
         getRecipe={getRecipe}/>}
        {loading && (
   <div className="spinner-container">
-    <ClipLoader color="#ff9800" size={50} />
-    <p>Are your pans ready??? 🍳</p>
+    <ClipLoader color="#ff9800" size={50} className="loader" />
+    <p>Are your PANS🫕🍯🍲 ready??? 🍳</p>
   </div>
 )}
 
